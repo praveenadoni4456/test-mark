@@ -1,7 +1,7 @@
 resource "tfe_workspace" "global-iam" {
   name                          = "02-global-iam"
   organization                  = var.tfc_organization
-  project_id                    = tfe_project.project.id
+  #project_id                    = tfe_project.project.id
   description                   = "Global IAM"
   tag_names                     = ["administration", "global"]
   allow_destroy_plan            = true
