@@ -14,7 +14,6 @@ resource "tfe_workspace" "hierarchical-firewall-policy" {
     oauth_token_id = data.tfe_oauth_client.client.oauth_token_id
   }
 }
-
 resource "tfe_variable" "hierarchical-firewall-policy-org_id" {
   key          = "org_id"
   value        = var.org_id
@@ -23,7 +22,6 @@ resource "tfe_variable" "hierarchical-firewall-policy-org_id" {
   sensitive    = true
   workspace_id = tfe_workspace.hierarchical-firewall-policy.id
 }
-
 resource "tfe_workspace_variable_set" "hierarchical-firewall-policy-wif" {
   variable_set_id = tfe_variable_set.workload-identity.id
   workspace_id    = tfe_workspace.hierarchical-firewall-policy.id
