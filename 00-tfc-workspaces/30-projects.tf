@@ -82,6 +82,7 @@ resource "tfe_workspace_variable_set" "projects-prd" {
   variable_set_id = tfe_variable_set.gcp-org-data.id
   workspace_id    = tfe_workspace.projects-prd.id
 }
+
 resource "tfe_workspace_variable_set" "projects-wif-prd" {
   variable_set_id = tfe_variable_set.workload-identity.id
   workspace_id    = tfe_workspace.projects-prd.id
