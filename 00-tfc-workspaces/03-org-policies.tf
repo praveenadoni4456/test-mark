@@ -14,7 +14,6 @@ resource "tfe_workspace" "org-policies" {
     oauth_token_id = data.tfe_oauth_client.client.oauth_token_id
   }
 }
-
 resource "tfe_variable" "org-policies-org-id" {
   category     = "terraform"
   key          = "org_id"
@@ -22,7 +21,6 @@ resource "tfe_variable" "org-policies-org-id" {
   description  = "GCP Organization ID"
   workspace_id = tfe_workspace.org-policies.id
 }
-
 resource "tfe_workspace_variable_set" "org-policies-wif" {
   variable_set_id = tfe_variable_set.workload-identity.id
   workspace_id    = tfe_workspace.org-policies.id
