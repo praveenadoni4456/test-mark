@@ -1,4 +1,3 @@
-
 resource "tfe_workspace" "cloud-administration-global" {
   name                          = "01-cloud-administration-global"
   organization                  = var.tfc_organization
